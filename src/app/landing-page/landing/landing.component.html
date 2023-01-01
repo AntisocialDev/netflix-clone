@@ -1,0 +1,140 @@
+<main>
+  <div class="bg-div py-[32px] px-[25px] text-white">
+    <div class="nav flex justify-between items-center">
+      <img class="w-[110px]" src="/assets/images/netflix-logo.svg" />
+      <button class="rounded-[3px] bg-[#E50914] text-white px-3 py-[3px]">
+        Sign In
+      </button>
+    </div>
+
+    <div class="mt-[80px] md:mt-[180px] flex flex-col items-center">
+      <div class="flex flex-col gap-5 text-center w-[88vw]">
+        <h1 class="text-4xl font-bold">
+          Unlimited movies, TV shows, and more.
+        </h1>
+        <p class="text-xl">Watch anywhere. Cancel anytime.</p>
+        <p class="text-xl">
+          Ready to watch? Enter your email to create or restart your membership.
+        </p>
+      </div>
+      <div class="flex w-full flex-col mt-5 gap-5 mb-[40px]">
+        <input
+          class="px-3 py-4 text-lg text-black"
+          type="email"
+          placeholder="Email address"
+        />
+        <button
+          class="rounded-[3px] self-center bg-[#E50914] text-white text-xl px-5 py-3 flex items-center justify-center gap-4"
+        >
+          Get Started
+          <span>
+            <img class="w-[8px]" src="/assets/images/right-arrow.svg" />
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="feat-div">
+    <div class="flex flex-col gap-4 text-center">
+      <h1 class="text-3xl">Enjoy on your TV.</h1>
+      <p class="text-xl">
+        Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray
+        players, and more.
+      </p>
+    </div>
+
+    <img src="/assets/images/tv-image.svg" />
+  </div>
+
+  <div class="feat-div">
+    <div class="flex flex-col gap-4 text-center">
+      <h1 class="text-3xl">Download your shows to watch offline.</h1>
+      <p class="text-xl">
+        Save your favorites easily and always have something to watch.
+      </p>
+    </div>
+
+    <img src="/assets/images/phone-img.svg" />
+  </div>
+
+  <div class="feat-div">
+    <div class="flex flex-col gap-4 text-center">
+      <h1 class="text-3xl">Watch everywhere.</h1>
+      <p class="text-xl">
+        Stream unlimited movies and TV shows on your phone, tablet, laptop, and
+        TV without paying more.
+      </p>
+    </div>
+  </div>
+
+  <div class="feat-div">
+    <div class="flex flex-col gap-4 text-center">
+      <h1 class="text-3xl">Create profiles for kids.</h1>
+      <p class="text-xl">
+        Send kids on adventures with their favorite characters in a space made
+        just for them—free with your membership.
+      </p>
+    </div>
+
+    <img src="/assets/images/kids-img.svg" />
+  </div>
+
+  <div class="feat-div faq-div">
+    <h1 class="text-3xl text-center">Frequently Asked Questions</h1>
+  </div>
+    <div class="bg-[#000000] text-xl flex flex-col gap-5">
+      <mat-accordion hideToggle="false" [multi]="false">
+        <mat-expansion-panel
+          *ngFor="let faq of faqList; let i = index"
+          class="bg-[#000000] py-1"
+        >
+          <mat-expansion-panel-header class="header">
+            <mat-panel-title>
+              <p class="text-lg">{{ faq.question }}</p>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <p class="text-lg py-[40px]">{{ faq.ans }}</p>
+        </mat-expansion-panel>
+      </mat-accordion>
+      <p class="self-center text-center w-[70%]">Ready to watch? Enter your email to create or restart your membership.</p>
+      <div class="flex w-full flex-col gap-5 mb-[40px] items-center">
+        <input
+          class="px-3 py-4 text-lg text-black w-[90%]"
+          type="email"
+          placeholder="Email address"
+        />
+        <button
+          class="rounded-[3px] self-center bg-[#E50914] text-white text-xl px-5 py-3 flex items-center justify-center gap-4"
+        >
+          Get Started
+          <span>
+            <img class="w-[8px]" src="/assets/images/right-arrow.svg" />
+          </span>
+        </button>
+      </div>
+    </div>
+
+    <div class="feat-div contact-div">
+      <p class="text-base">Questions? Contact us.</p>
+      <div class="grid grid-cols-2 gap-x-20 gap-y-2">
+        <p>FAQ</p>
+        <p>Help Center</p>
+        <p>Account</p>
+        <p>Media Center</p>
+        <p>Investor Relations</p>
+        <p>Jobs</p>
+        <p>Redeem Gift Cards</p>
+        <p>Buy Gift Cards</p>
+        <p>Ways to Watch</p>
+        <p>Terms of Use</p>
+        <p>Privacy</p>
+        <p>Cookie Preferences</p>
+        <p>Corporate Information</p>
+        <p>Contact Us</p>
+        <p>Speed Test</p>
+        <p>Legal Notices</p>
+        <p>Only on Netflix</p>
+      </div>
+    </div>
+</main>
