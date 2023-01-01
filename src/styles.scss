@@ -1,1 +1,74 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+
+
+.bg-div {
+  background: url("/assets/images/landing-bg-image.svg");
+  object-fit: contain;
+  background-repeat: no-repeat;
+  width: 100vw;
+}
+
+.feat-div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 25px;
+  justify-content: center;
+  background-color: #000000;
+  border: none;
+  border-top: 8px solid #222222;
+  width: 100%;
+
+  img{
+    width: 400px;
+  }
+}
+
+.faq-div{
+  padding-bottom: 0;
+}
+
+.contact-div{
+  align-items: flex-start;
+  color: #757575;
+}
+
+.mat-expansion-panel-header-title{
+  color: #ffffff;
+}
+
+.header{
+  p{
+    padding: 0;
+    margin: 0;
+  }
+  background-color: #303030 !important;
+  &:hover{
+    background: #303030 !important;
+  }
+}
+
+
+.mat-expansion-panel-body {
+  margin-top: 1px;
+  background-color: #303030;
+  color: #ffffff;
+  line-height: 25px;
+
+  &:hover{
+    background: #303030 !important;
+  }
+}
+
+
