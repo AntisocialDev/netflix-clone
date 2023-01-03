@@ -86,8 +86,8 @@
   <div class="bg-[#000000] text-xl flex flex-col gap-5">
     <mat-accordion hideToggle="true" [multi]="false">
       <mat-expansion-panel
-        (opened)="panelOpenState = true"
-        (closed)="panelOpenState = false"
+        (opened)="panelOpenState = true; faq.open = true"
+        (closed)="panelOpenState = false; faq.open = false"
         *ngFor="let faq of faqList; let i = index"
         class="bg-[#000000] py-1"
       >
@@ -95,8 +95,8 @@
           <mat-panel-title class="flex justify-between items-center gap-5">
               <p class="text-lg">{{ faq.question }}</p>
               <div class="flex">
-                <mat-icon *ngIf="!panelOpenState">add</mat-icon>
-                <mat-icon *ngIf="panelOpenState">remove</mat-icon>
+                <mat-icon *ngIf="!faq.open">add</mat-icon>
+                <mat-icon *ngIf="faq.open">close</mat-icon>
               </div>
           </mat-panel-title>
         </mat-expansion-panel-header>
