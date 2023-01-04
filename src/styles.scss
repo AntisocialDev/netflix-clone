@@ -15,7 +15,7 @@ body {
 }
 
 .bg-div {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/images/landing-bg-image.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/assets/images/landing-bg-image.jpg");
   object-fit: cover;
   background-repeat: no-repeat;
   width: 100vw;
@@ -25,7 +25,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 60px 25px;
+  padding: 60px 50px;
   justify-content: center;
   background-color: #000000;
   border: none;
@@ -35,15 +35,26 @@ body {
   img {
     width: 400px;
   }
+
+  @media (min-width: 1024px) {
+    flex-direction: row;
+    gap: 30px;
+    img{
+      width: 60%;
+    }
+  }
 }
 
 .faq-div {
-  padding-bottom: 0;
+  padding-bottom: 20px;
 }
 
 .contact-div {
   align-items: flex-start;
   color: #757575;
+  @media (min-width: 1024px) {
+    align-items: center;
+  }
 }
 
 .mat-expansion-panel-header-title {
@@ -62,6 +73,9 @@ mat-panel-title {
   background-color: #303030 !important;
   &:hover {
     background: #303030 !important;
+  }
+  @media (min-width: 1024px){
+    padding: 40px 20px !important;
   }
 }
 

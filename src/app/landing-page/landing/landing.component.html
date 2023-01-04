@@ -1,30 +1,30 @@
 <main>
-  <div class="bg-div py-[32px] px-[25px] text-white">
+  <div class="bg-div py-[32px] px-[50px] text-white">
     <div class="nav flex justify-between items-center">
-      <img class="w-[80px]" src="/assets/images/netflix-logo.svg" />
-      <button class="rounded-[3px] bg-[#E50914] text-white px-3 py-[3px]">
+      <img class="w-[80px] sm:w-[100px] lg:w-[150px]" src="/assets/images/netflix-logo.svg" />
+      <button class="rounded-[3px] bg-[#E50914] text-white px-5 py-[8px]">
         Sign In
       </button>
     </div>
 
-    <div class="mt-[80px] md:mt-[180px] flex flex-col items-center">
-      <div class="flex flex-col gap-5 text-center w-[88vw]">
-        <h1 class="text-4xl font-bold">
+    <div class="mt-[80px] md:mt-[180px] flex flex-col items-center lg:mt-[160px]">
+      <div class="flex flex-col gap-2 text-center lg:w-[50vw]">
+        <p class="text-3xl sm:text-5xl lg:text-6xl font-bold">
           Unlimited movies, TV shows, and more.
-        </h1>
-        <p class="text-xl">Watch anywhere. Cancel anytime.</p>
-        <p class="text-xl">
+        </p>
+        <p class="text-xl sm:text-2xl">Watch anywhere. Cancel anytime.</p>
+        <p class="text-xl sm:text-2xl lg:text-xl">
           Ready to watch? Enter your email to create or restart your membership.
         </p>
       </div>
-      <div class="flex w-full flex-col mt-5 gap-5 mb-[40px]">
+      <div class="flex w-full flex-col mt-2 gap-5 mb-[40px] lg:flex-row lg:gap-0.5 lg:w-[800px] lg:mb-[160px]">
         <input
-          class="px-3 py-4 text-lg text-black"
+          class="p-3 text-lg text-black lg:w-[70%]"
           type="email"
           placeholder="Email address"
         />
         <button
-          class="rounded-[3px] self-center bg-[#E50914] text-white text-xl px-5 py-3 flex items-center justify-center gap-4"
+          class="rounded-[3px] self-center bg-[#E50914] text-white text-xl px-5 py-2 flex items-center justify-center gap-4 lg:py-4 lg:w-[30%]"
         >
           Get Started
           <span>
@@ -36,9 +36,9 @@
   </div>
 
   <div class="feat-div">
-    <div class="flex flex-col gap-4 text-center">
-      <h1 class="text-3xl">Enjoy on your TV.</h1>
-      <p class="text-xl">
+    <div class="flex flex-col gap-4 text-center lg:text-start">
+      <p class="text-3xl sm:text-5xl lg:font-bold">Enjoy on your TV.</p>
+      <p class="text-xl lg:text-3xl">
         Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray
         players, and more.
       </p>
@@ -47,10 +47,10 @@
     <img src="/assets/images/tv-image.svg" />
   </div>
 
-  <div class="feat-div">
-    <div class="flex flex-col gap-4 text-center">
-      <h1 class="text-3xl">Download your shows to watch offline.</h1>
-      <p class="text-xl">
+  <div class="feat-div lg:flex-row-reverse">
+    <div class="flex flex-col gap-4 text-center lg:text-start">
+      <p class="text-3xl sm:text-5xl lg:font-bold">Download your shows to watch offline.</p>
+      <p class="text-xl lg:text-3xl">
         Save your favorites easily and always have something to watch.
       </p>
     </div>
@@ -59,19 +59,19 @@
   </div>
 
   <div class="feat-div">
-    <div class="flex flex-col gap-4 text-center">
-      <h1 class="text-3xl">Watch everywhere.</h1>
-      <p class="text-xl">
+    <div class="flex flex-col gap-4 text-center lg:text-start">
+      <p class="text-3xl sm:text-5xl lg:font-bold">Watch everywhere.</p>
+      <p class="text-xl lg:text-3xl">
         Stream unlimited movies and TV shows on your phone, tablet, laptop, and
         TV without paying more.
       </p>
     </div>
   </div>
 
-  <div class="feat-div">
-    <div class="flex flex-col gap-4 text-center">
-      <h1 class="text-3xl">Create profiles for kids.</h1>
-      <p class="text-xl">
+  <div class="feat-div lg:flex-row-reverse">
+    <div class="flex flex-col gap-4 text-center lg:text-start">
+      <p class="text-3xl sm:text-5xl lg:font-bold">Create profiles for kids.</p>
+      <p class="text-xl lg:text-3xl">
         Send kids on adventures with their favorite characters in a space made
         just for them—free with your membership.
       </p>
@@ -81,10 +81,10 @@
   </div>
 
   <div class="feat-div faq-div">
-    <h1 class="text-3xl text-center">Frequently Asked Questions</h1>
+    <p class="text-3xl text-center sm:text-5xl ">Frequently Asked Questions</p>
   </div>
-  <div class="bg-[#000000] text-xl flex flex-col gap-5">
-    <mat-accordion hideToggle="true" [multi]="false">
+  <div class="bg-[#000000] text-xl flex flex-col gap-5 sm:px-[100px] xl:px-[350px]">
+    <mat-accordion hideToggle="true" [multi]="false" class="lg:mb-10">
       <mat-expansion-panel
         (opened)="panelOpenState = true; faq.open = true"
         (closed)="panelOpenState = false; faq.open = false"
@@ -93,27 +93,27 @@
       >
         <mat-expansion-panel-header class="header">
           <mat-panel-title class="flex justify-between items-center gap-5">
-              <p class="text-lg">{{ faq.question }}</p>
+              <p class="text-lg sm:text-xl lg:text-2xl">{{ faq.question }}</p>
               <div class="flex">
-                <mat-icon *ngIf="!faq.open">add</mat-icon>
-                <mat-icon *ngIf="faq.open">close</mat-icon>
+                <mat-icon class="lg:scale-[1.5]" *ngIf="!faq.open">add</mat-icon>
+                <mat-icon class="lg:scale-[1.5] " *ngIf="faq.open">close</mat-icon>
               </div>
           </mat-panel-title>
         </mat-expansion-panel-header>
-        <p class="text-lg py-[40px] break-line">{{ faq.ans }}</p>
+        <p class="text-lg sm:text-xl py-[40px] break-line lg:text-2xl">{{ faq.ans }}</p>
       </mat-expansion-panel>
     </mat-accordion>
-    <p class="self-center text-center w-[70%]">
+    <p class="self-center text-center w-[70%] sm:w-full">
       Ready to watch? Enter your email to create or restart your membership.
     </p>
-    <div class="flex w-full flex-col gap-5 mb-[40px] items-center">
+    <div class="flex w-full flex-col gap-5 mb-[40px] items-center lg:flex-row lg:gap-0.5 lg:w-[800px] lg:self-center">
       <input
-        class="px-3 py-4 text-lg text-black w-[90%]"
+        class="px-3 py-4 text-lg text-black w-[90%] sm:w-[80vw] lg:w-[70%]"
         type="email"
         placeholder="Email address"
       />
       <button
-        class="rounded-[3px] self-center bg-[#E50914] text-white text-xl px-5 py-3 flex items-center justify-center gap-4"
+        class="rounded-[3px] self-center bg-[#E50914] text-white text-xl px-5 py-2 flex items-center justify-center gap-4 lg:py-4 lg:w-[30%]"
       >
         Get Started
         <span>
@@ -123,9 +123,9 @@
     </div>
   </div>
 
-  <div class="flex flex-col gap-10 feat-div contact-div">
+  <div class="flex flex-col gap-10 feat-div contact-div lg:flex-col">
     <p class="text-base">Questions? Contact us.</p>
-    <div class="grid grid-cols-2 gap-x-20 gap-y-2">
+    <div class="grid grid-cols-2 gap-x-20 gap-y-2 sm:grid-cols-3 lg:grid-cols-4">
       <p>FAQ</p>
       <p>Help Center</p>
       <p>Account</p>
