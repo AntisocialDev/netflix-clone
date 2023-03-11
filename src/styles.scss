@@ -1,91 +1,87 @@
 /* You can add global styles to this file, and also import other style files */
+
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 body {
-  font-family: "Roboto", sans-serif;
-  font-size: 18px;
-  color: #ffffff;
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    color: #ffffff;
 }
 
-.break-line{
-  white-space: pre-line;
+.break-line {
+    white-space: pre-line;
 }
 
 .bg-div {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/assets/images/landing-bg-image.jpg");
-  object-fit: cover;
-  background-repeat: no-repeat;
-
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/assets/images/landing-bg-image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .feat-div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 60px 50px;
-  justify-content: center;
-  background-color: #000000;
-  border: none;
-  border-top: 8px solid #222222;
-  width: 100%;
-
-  img {
-    width: 400px;
-  }
-
-  @media (min-width: 1024px) {
-    flex-direction: row;
-    gap: 30px;
-    img{
-      width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 50px;
+    justify-content: center;
+    background-color: #000000;
+    border: none;
+    border-top: 8px solid #222222;
+    width: 100%;
+    img {
+        width: 400px;
     }
-  }
+    @media (min-width: 1024px) {
+        flex-direction: row;
+        gap: 30px;
+        img {
+            width: 60%;
+        }
+    }
 }
 
 .faq-div {
-  padding-bottom: 20px;
+    padding-bottom: 20px;
 }
 
 .contact-div {
-  align-items: flex-start;
-  color: #757575;
-  @media (min-width: 1024px) {
-    align-items: center;
-  }
+    align-items: flex-start;
+    color: #757575;
+    @media (min-width: 1024px) {
+        align-items: center;
+    }
 }
 
 .mat-expansion-panel-header-title {
-  color: #ffffff;
+    color: #ffffff;
 }
 
 mat-panel-title {
-  margin-right: 0 !important;
+    margin-right: 0 !important;
 }
 
 .header {
-  p {
-    padding: 0;
-    margin: 0;
-  }
-  background-color: #303030 !important;
-  &:hover {
-    background: #303030 !important;
-  }
-  @media (min-width: 1024px){
-    padding: 40px 20px !important;
-  }
+    p {
+        padding: 0;
+        margin: 0;
+    }
+    background-color: #303030 !important;
+    &:hover {
+        background: #303030 !important;
+    }
+    @media (min-width: 1024px) {
+        padding: 40px 20px !important;
+    }
 }
 
 .mat-expansion-panel-body {
-  margin-top: 1px;
-  background-color: #303030;
-  color: #ffffff;
-  line-height: 25px;
-
-  &:hover {
-    background: #303030 !important;
-  }
+    margin-top: 1px;
+    background-color: #303030;
+    color: #ffffff;
+    line-height: 25px;
+    &:hover {
+        background: #303030 !important;
+    }
 }

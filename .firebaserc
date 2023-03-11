@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "netflix-clone-27e1f": {
+      "hosting": {
+        "netflix-clone": [
+          "netflix-clone-27e1f"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "netflix-clone-27e1f"
+  }
+}
